@@ -1,70 +1,123 @@
-*{
+/* Reset de márgenes */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background-image: linear-gradient(135deg,#00e7d4, #505488, #ef3f80, #161569, #ef3f80, #505488, #00E7D4 );
+/* Estilo general para el body */
+body {
+    background-image: linear-gradient(135deg, #ff99cc, #ff66b2, #ff3399);
     background-size: 500%;
-    animation: fanimado 60s infinite;
-}
-.contenedor{
-
-    width: 100vw;
+    animation: fondoAnimado 60s infinite;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     text-align: center;
 }
 
-p{
-    font-size: xx-large;
-    padding: 5%;
+/* Contenedor principal */
+.contenedor {
+    width: 90vw;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-button{
-    font-size: xx-large;
-    padding: 0.75em;
+h1 {
+    font-size: 2.5rem;
+    color: #ff1a8c;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-#yesBtn{
-    transform: translate(-100%,0);
+/* Estilos para el contenedor del GIF */
+.gif-container {
+    margin-bottom: 30px;
 }
 
-#noBtn{
-    position: absolute;
+/* Tamaño y estilo del GIF */
+.gif {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+    animation: gifAnimation 3s infinite alternate;
 }
 
-@keyframes animat {
+/* Botones centrados en el contenedor */
+.botones {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Estilos para los botones */
+button {
+    font-size: 1.5rem;
+    padding: 0.75em 2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    background-color: #ff66b2;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #ff3385;
+}
+
+/* Animación del fondo */
+@keyframes fondoAnimado {
     0% {
-        transform: scale(0);
+        background-position: 0% 50%;
     }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes fanimado{
-    0%{
-        background-image: 0% 50%;
-    }
-    50%{
+    50% {
         background-position: 100% 50%;
     }
-    100%{
+    100% {
         background-position: 0% 50%;
     }
 }
 
-footer{
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 5px 4;
+/* Animación para el GIF */
+@keyframes gifAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-footer a{
-    text-decoration: none;
-    color:#fff;
-    display: inline-block;
-    margin: 5px;
-    font-size: 26px;
+/* Estilo para el footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #ff1a8c;
+}
+
+/* Responsividad para dispositivos pequeños */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .gif {
+        width: 200px;
+    }
+
+    button {
+        font-size: 1.2rem;
+    }
 }
