@@ -1,8 +1,8 @@
 const yesBtn = document.querySelector('#yesBtn');
 
 yesBtn.addEventListener('click',function () {
-    alert('YO TAMBIEN QUIERO PINTAR UN BONITO DIA CON TIGO!!')
-    alert('NATHALIA MOLINA')
+    alert('YO TAMBIEN QUIERO SALIR CON TIGO!!')
+    alert('SEÑORITA')
 });
 
 const noBtn = document.querySelector('#noBtn');
