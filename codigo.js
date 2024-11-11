@@ -3,8 +3,8 @@ const noBtn = document.querySelector('#noBtn');
 
 // Acción al hacer clic en el botón 'SI'
 yesBtn.addEventListener('click', function () {
-    alert('¡YAY! ¡Yo también quiero salir contigo! 😍');
-    alert('¡Que tengas un día maravilloso! 🌸');
+    alert('¡Si! ¡Yo también quiero salir contigo! ');
+    alert('¡Que tengas un día maravilloso! ');
 });
 
 // Movimiento aleatorio del botón 'NO' al pasar el mouse
